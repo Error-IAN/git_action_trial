@@ -1,0 +1,19 @@
+name: Challenge Practice 
+
+on: push
+
+jobs: 
+  print_name:
+    runs-on: ubuntu-slim
+
+
+    steps:
+      - name: Print name
+        run: echo "My name is Soumyaraj Debnath"
+
+      - name: Print Current Date
+        run: python3 scripts/curr_date.py
+
+      - name: Print Status
+        run: echo "Test pipeline working"
+
