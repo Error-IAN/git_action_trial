@@ -4,10 +4,15 @@ on: push
 
 jobs: 
   print_name:
-    runs-on: ubuntu-slim
+  # Changed to a standard runner name
+    runs-on: ubuntu-latest
 
 
     steps:
+    #THIS IS THE CRITICAL THING FOR RUNNING SCRIPTS IN THE PIPELINE
+      - name: Checkout Code
+        uses: actions/checkout@v4 
+
       - name: Print name
         run: echo "My name is Soumyaraj Debnath"
 
